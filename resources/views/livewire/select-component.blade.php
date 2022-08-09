@@ -4,5 +4,6 @@
         wire:model="values"
         :selected="$values"
         multiple
+        name="foobar"
     />
 </div>

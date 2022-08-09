@@ -5,8 +5,11 @@
     'selected' => [],
     'searchFloor' => 3,
     'renderLimit' => 50,
+    'name' => null,
 ])
-<div {{ $attributes }} wire:ignore x-data="{
+<div {{ $attributes }}
+        x-id="['searchable-input']"
+        wire:ignore x-data="{
         multiple: {{ $multiple?'true':'false' }},
         value: @js($selected),
         options: @js($options),
@@ -74,5 +77,17 @@
             })
         }
     }" class="mx-auto w-full">
-    <select x-ref="select" @if($required) required @endif @if($multiple) multiple @endif></select>
+    <select
+        x-ref="select"
+        :id="$id('{{ $name }}')"
+        @if($name)
+            name="{{ $name }}"
+        @endif
+        @if($required)
+            required
+        @endif
+        @if($multiple)
+            multiple
+        @endif>
+    </select>
 </div>

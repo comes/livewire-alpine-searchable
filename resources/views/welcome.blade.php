@@ -15,7 +15,7 @@
             <div>
                 test
             </div>
-            @livewire('select-component')
+            <x-remote-searchable name="foo" />
     </div>
     @vite(['resources/js/app.js'])
     @livewireScripts
