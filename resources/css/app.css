@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .choices__item {
+    @apply inline-block align-middle rounded-md py-1 px-2 text-sm font-semibold mx-0.5 bg-blue-600 text-white break-all box-border
+} */
